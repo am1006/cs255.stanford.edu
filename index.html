@@ -1,0 +1,840 @@
+
+<!--
+
+    DO  NOT  EDIT  THIS  FILE
+
+    EDIT  syllabus.data  instead  and then run  "make"
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+<link rel='stylesheet' type='text/css'
+      href='seclab.css' />
+<link rel='stylesheet' 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Online Cryptography Course by Dan Boneh</title>
+<style type="text/css">
+  div.week {width: 70%; border-top: 2px solid #D03720; 
+         padding: 10px 0 0 5px; margin-bottom: 1em;}
+  div.weekone {margin: 1em 0em 1em 0em}
+  .weeknum {text-decoration: underline}
+  .topic {font-weight: bold; font-size: larger; margin: 0 1em 0 1em;}
+
+  .slides { margin-left: 2em; }
+  .slidelist { margin-left: 4em; white-space: nowrap;}
+
+  .section { margin: 1em 0em 0em 2em; padding: 0em;}
+
+  .lectures { margin-top: 0em; padding-top: 0em;}
+  .lecture { padding-left: 4em; margin-top: .4em; list-style: none;}
+  .lecture a {text-decoration: none;}
+  .lecture:hover {text-decoration: none; background-color: #D0DDDD;}
+  .mins {padding-left:1em; color:gray; font-size: smaller}
+
+  .books { margin-left: 2em;  margin-top: 0; padding: 2pt; }
+  p.book-list { margin: 0; padding-top: 2em; }
+  ul.book-list { margin: 0; padding: 0; display: inline; }
+
+  div#footer {font-size: smaller; border-top: 1px solid #D3D3D3;
+              color: #939393; margin-top: 5px; }
+
+  .buttondiv {margin:auto; padding:10px}
+  .button {background-color: blue; border: none; color: white; 
+    margin:0 auto; padding: 10px 30px; display: block;
+    text-align: center; text-decoration: none; font-size: larger;
+    border-radius: 12px;}
+</style>
+</head>
+
+<body>
+<div id="outer-wrapper">
+<div id="inner-wrapper">
+
+<h1 id='header'><a href=".">
+Online Cryptography Course
+</a></h1>
+
+<div id='content' class='full course'>
+
+<div class='logo'>
+	<a href="https://crypto.stanford.edu">
+        <img src="https://crypto.stanford.edu/images/seclab-128.png" alt="Logo"/>
+	</a>
+</div>
+
+<p style="margin:30px 0 0 0; padding-bottom:0">
+<b>Instructor:</b> &nbsp; Dan Boneh, Stanford University
+</p>
+
+<p class="book-list">
+<b>Online cryptography course preview:</b>
+This page contains all the lectures in the free cryptography
+course.
+To officially take the course, including homeworks, projects,
+and final exam, please visit 
+the <a href="https://www.coursera.org/learn/crypto">course page at Coursera</a>.
+</p>
+
+<div class="buttondiv">
+<button type="button" class="button" 
+        onclick="location.href='https://www.coursera.org/learn/crypto'">
+Go to course
+</button>
+</div>
+
+
+<p class="book-list">
+<b>Textbook:</b> The following is a free textbook for the course.
+The book goes into more depth, including security proofs, and many exercises. 
+</p>
+<ul class="book-list">
+
+<li class="books"> 
+<i><a href="http://toc.cryptobook.us">
+A Graduate Course in Applied Cryptography</a></i> 
+by D. Boneh and V. Shoup &nbsp; (free)
+</li>
+
+</ul>
+
+
+<h2> Course syllabus, videos, and slides </h2>
+
+
+
+<div class="weekone">  <span class="weeknum">Week 1</span>: 
+  <span class="topic">Course overview and stream ciphers </span> 
+  (chapters 2-3 in the <a href="http://toc.cryptobook.us">textbook</a>)
+</div>
+<div class="slides">Slides for week 1:</div>
+<div class="slidelist">
+  Introduction: &nbsp; 
+     <a href="slides/01-intro-v2-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/01-intro-v2-annotated.pptx">pptx</a>  <br/>
+  Stream ciphers: &nbsp; 
+     <a href="slides/02-stream-v2-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/02-stream-v2-annotated.pptx">pptx</a>  <br/>
+</div>
+
+<div class="section">What is cryptography?</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/lboqg/course-overview" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Course overview 
+  <span class="mins">(10 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/ubmLN/what-is-cryptography" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  What is cryptography 
+  <span class="mins">(15 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/xAJaD/history-of-cryptography" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  History of cryptography 
+  <span class="mins">(18 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Crash course in discrete probability</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/qaEcL/discrete-probability-crash-course" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Discrete probability (crash course) 
+  <span class="mins">(18 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/JkDRg/discrete-probability-crash-course-cont" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Discrete probability (crash course, continued) 
+  <span class="mins">(13 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Stream Ciphers 1: the one-time pad and stream ciphers</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/cbnX1/information-theoretic-security-and-the-one-time-pad" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Information theoretic security and the one-time pad 
+  <span class="mins">(18 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/5m8ay/stream-ciphers-and-pseudo-random-generators" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Stream ciphers and pseudorandom generators 
+  <span class="mins">(19 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Stream Ciphers 2: attacks and common mistakes</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/euFJx/attacks-on-stream-ciphers-and-the-one-time-pad" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Attacks on stream ciphers and the one-time pad 
+  <span class="mins">(23 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Stream Ciphers 3: real-world examples</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/mQAkP/real-world-stream-ciphers" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Real-world stream ciphers 
+  <span class="mins">(19 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Stream Ciphers 4: what is a secure cipher?</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/De10M/prg-security-definitions" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  PRG security definition 
+  <span class="mins">(24 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/q0h9g/semantic-security" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Semantic security 
+  <span class="mins">(15 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/VeLNT/stream-ciphers-are-semantically-secure-optional" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Stream ciphers are semantically secure 
+  <span class="mins">(10 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="week">  <span class="weeknum">Week 2</span>: 
+  <span class="topic">Block ciphers </span> 
+  (chapters 4-5 in the <a href="http://toc.cryptobook.us">textbook</a>)
+</div>
+<div class="slides">Slides for week 2:</div>
+<div class="slidelist">
+  Block ciphers: &nbsp; 
+     <a href="slides/03-block-v2-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/03-block-v2-annotated.pptx">pptx</a>  <br/>
+  Using block ciphers: &nbsp; 
+     <a href="slides/04-using-block-v2-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/04-using-block-v2-annotated.pptx">pptx</a>  <br/>
+</div>
+
+<div class="section">Block Ciphers 1: overview</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/t4JJr/what-are-block-ciphers" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  What are block ciphers 
+  <span class="mins">(16 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Block Ciphers 2: The Data Encryption Standard</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/TzBaf/the-data-encryption-standard" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  The Data Encryption Standard (DES) 
+  <span class="mins">(21 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/fPA8S/exhaustive-search-attacks" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Exhaustive search attacks 
+  <span class="mins">(19 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/TtPa9/more-attacks-on-block-ciphers" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  More attacks on block ciphers 
+  <span class="mins">(16 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Block Ciphers 3: AES and other constructions</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/cHOMl/the-aes-block-cipher" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  The AES block cipher 
+  <span class="mins">(13 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/X2wYF/block-ciphers-from-prgs" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Block ciphers from PRGs 
+  <span class="mins">(11 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">How to Use Block Ciphers 1: one-time key</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/9p25F/review-prps-and-prfs" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Review: PRPs and PRFs 
+  <span class="mins">(11 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/QZAHs/modes-of-operation-one-time-key" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Modes of operation: one-time key 
+  <span class="mins">(7 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">How to Use Block Ciphers 2: many-time key</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/1pnne/security-for-many-time-key-cpa-security" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Security for many-time key (CPA security) 
+  <span class="mins">(22 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/wlIX8/modes-of-operation-many-time-key-cbc" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Modes of operation: many-time key (CBC) 
+  <span class="mins">(16 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/5wL84/modes-of-operation-many-time-key-ctr" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Modes of operation: many-time key (CTR) 
+  <span class="mins">(9 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="week">  <span class="weeknum">Week 3</span>: 
+  <span class="topic">Message integrity </span> 
+  (chapters 6-8  in the <a href="http://toc.cryptobook.us">textbook</a>)
+</div>
+<div class="slides">Slides for week 3:</div>
+<div class="slidelist">
+  Message integrity: &nbsp; 
+     <a href="slides/05-integrity-v2-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/05-integrity-v2-annotated.pptx">pptx</a>  <br/>
+  Collision resistant hashing: &nbsp; 
+     <a href="slides/06-collision-resistance-v2-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/06-collision-resistance-v2-annotated.pptx">pptx</a>  <br/>
+</div>
+
+<div class="section">Message Integrity 1: definitions</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/iVGR5/message-authentication-codes" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Message authentication codes 
+  <span class="mins">(15 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/bn1t0/macs-based-on-prfs" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  MACs based on PRFs 
+  <span class="mins">(9 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Message Integrity 2: constructions</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/QYT6i/cbc-mac-and-nmac" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  CBC-MAC and NMAC 
+  <span class="mins">(19 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/vTbf0/mac-padding" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  MAC padding 
+  <span class="mins">(8 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/u8xyE/pmac-and-the-carter-wegman-mac" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  PMAC and Carter-Wegman MAC 
+  <span class="mins">(15 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Collision Resistance 1: what is a collision resistant function?</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/LbrG3/introduction" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Introduction 
+  <span class="mins">(10 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/pyR4I/generic-birthday-attack" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Generic birthday attack 
+  <span class="mins">(14 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Collision Resistance 2: constructions</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/Hfnu9/the-merkle-damgard-paradigm" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  The Merkle-Damgard paradigm 
+  <span class="mins">(11 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/XZt5V/constructing-compression-functions" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Constructing compression functions 
+  <span class="mins">(8 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">HMAC: a MAC from a hash function</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/OjMrT/hmac" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  HMAC 
+  <span class="mins">(7 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/FHGW1/timing-attacks-on-mac-verification" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Timing attacks on MAC verification 
+  <span class="mins">(8 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="week">  <span class="weeknum">Week 4</span>: 
+  <span class="topic">Authenticated encryption </span> 
+  (chapter 9  in the <a href="http://toc.cryptobook.us">textbook</a>)
+</div>
+<div class="slides">Slides for week 4:</div>
+<div class="slidelist">
+  Authenticated encryption: &nbsp; 
+     <a href="slides/07-authenc-v2-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/07-authenc-v2-annotated.pptx">pptx</a>  <br/>
+  Odds and ends: &nbsp; 
+     <a href="slides/08-odds-and-ends-v2-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/08-odds-and-ends-v2-annotated.pptx">pptx</a>  <br/>
+</div>
+
+<div class="section">Authenticated Encryption 1: why is it so important?</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/SiCKv/active-attacks-on-cpa-secure-encryption" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Active attacks on CPA-secure encryption 
+  <span class="mins">(12 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/IawVh/definitions" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Definitions 
+  <span class="mins">(5 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/MKepS/chosen-ciphertext-attacks" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Chosen ciphertext attacks 
+  <span class="mins">(12 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Authenticated Encryption 2: standard constructions</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/WvWMO/constructions-from-ciphers-and-macs" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Constructions from ciphers and MACs 
+  <span class="mins">(20 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Authenticated Encryption 3: pitfalls</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/WZUsh/case-study-tls-1-2" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Case study: TLS 1.2 
+  <span class="mins">(17 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/8s23o/cbc-padding-attacks" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  CBC padding attacks 
+  <span class="mins">(14 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/mtJS8/attacking-non-atomic-decryption" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Attacking non-atomic decryption 
+  <span class="mins">(9 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Odds and Ends 1: how to derive keys</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/A1ETP/key-derivation" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Key derivation 
+  <span class="mins">(13 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Odds and Ends 2: searching on encrypted data</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/8oHZd/deterministic-encryption" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Deterministic encryption 
+  <span class="mins">(14 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/hM7f2/deterministic-encryption-siv-and-wide-prp" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Deterministic encryption: SIV and wide PRP 
+  <span class="mins">(20 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Odds and Ends 3: disk encryption and creditcard encryption</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/YpC3s/tweakable-encryption" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Tweakable encryption 
+  <span class="mins">(14 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/aFRSZ/format-preserving-encryption" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Format preserving encryption 
+  <span class="mins">(12 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="week">  <span class="weeknum">Week 5</span>: 
+  <span class="topic">Basic key exchange </span> 
+  (chapter 10 in the <a href="http://toc.cryptobook.us">textbook</a>)
+</div>
+<div class="slides">Slides for week 5:</div>
+<div class="slidelist">
+  Basic key exchange: &nbsp; 
+     <a href="slides/09-basic-key-exchange-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/09-basic-key-exchange-annotated.pptx">pptx</a>  <br/>
+  Crash course in number theory: &nbsp; 
+     <a href="slides/10-numth-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/10-numth-annotated.pptx">pptx</a>  <br/>
+</div>
+
+<div class="section">Basic Key Exchange 1: problem statement</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/Ef7Gy/trusted-3rd-parties" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Trusted 3rd parties 
+  <span class="mins">(11 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/ryDLg/merkle-puzzles" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Merkle puzzles 
+  <span class="mins">(11 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Basic Key Exchange 2: two solutions</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/yi9lT/the-diffie-hellman-protocol" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  The Diffie-Hellman protocol 
+  <span class="mins">(19 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/HB4jI/public-key-encryption" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Public-key encryption 
+  <span class="mins">(10 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Number Theory 1: modular arithmetic</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/2YWK8/notation" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Notation 
+  <span class="mins">(14 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/Z2Tso/fermat-and-euler" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Fermat and Euler 
+  <span class="mins">(18 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/fjRVO/modular-e-th-roots" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Modular e'th roots 
+  <span class="mins">(17 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Number Theory 2: easy and hard problems</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/wxOal/arithmetic-algorithms" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Arithmetic algorithms 
+  <span class="mins">(12 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/EKdgY/intractable-problems" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Intractable problems 
+  <span class="mins">(18 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="week">  <span class="weeknum">Week 6</span>: 
+  <span class="topic">Public-key encryption </span> 
+  (chapters 11-12  in the <a href="http://toc.cryptobook.us">textbook</a>)
+</div>
+<div class="slides">Slides for week 6:</div>
+<div class="slidelist">
+  Trapdoor permutation: &nbsp; 
+     <a href="slides/11-pubkey-trapdoor-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/11-pubkey-trapdoor-annotated.pptx">pptx</a>  <br/>
+  Diffie-Hellman: &nbsp; 
+     <a href="slides/12-pubkey-dh-annotated.pdf">pdf</a> &nbsp;
+     <a href="slides/12-pubkey-dh-annotated.pptx">pptx</a>  <br/>
+</div>
+
+<div class="section">Public Key Encryption from Trapdoor Permutations</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/qU4Cy/definitions-and-security" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Definitions and security 
+  <span class="mins">(15 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/nTRhL/constructions" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Constructions 
+  <span class="mins">(10 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Public Key Encryption from Trapdoor Permutations: RSA</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/JrGlH/the-rsa-trapdoor-permutation" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  The RSA trapdoor permutation 
+  <span class="mins">(17 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/JwjDq/pkcs-1" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  PKCS1 
+  <span class="mins">(21 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Public Key Encryption from Trapdoor Permutations: attacks</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/fyCKk/is-rsa-a-one-way-function" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Is RSA a one-way function? 
+  <span class="mins">(16 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/2tkqf/rsa-in-practice" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  RSA in practice 
+  <span class="mins">(13 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Public Key Encryption From Diffie-Hellman: ElGamal</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/ycSSO/the-elgamal-public-key-system" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  The ElGamal public-key system 
+  <span class="mins">(19 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/2tbL6/elgamal-security" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  ElGamal security 
+  <span class="mins">(13 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/1CIb5/elgamal-variants-with-better-security" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  ElGamal variants with better security 
+  <span class="mins">(10 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="section">Public Key Encryption: summary</div>
+<ul class="lectures">
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/ijaDI/a-unifying-theme" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  A unifying theme 
+  <span class="mins">(11 min.)</span>
+  </a>
+</li>
+
+<li class="lecture"> 
+  <a href="https://www.coursera.org/learn/crypto/lecture/DRsxF/farewell-for-now" target="_blank">
+  <i class="fa fa-play-circle"></i> &nbsp; 
+  Farwell for now 
+  <span class="mins">(5 min.)</span>
+  </a>
+</li>
+
+</ul>
+<div class="week">  <span class="weeknum">Week 7</span>: 
+  <span class="topic">Digital signatures</span> 
+  (chapters 13-14 in the <a href="http://toc.cryptobook.us">textbook</a>)
+</div>
+<div class="slides">Slides for week 7:</div>
+<div class="slidelist">
+  Digital signatures: &nbsp; 
+     <a href="slides/13-sigs.pdf">pdf</a> &nbsp;
+     <a href="slides/13-sigs.pptx">pptx</a>  <br/>
+  Hash-based signatures: &nbsp; 
+     <a href="slides/14-special-sigs.pdf">pdf</a> &nbsp;
+     <a href="slides/14-special-sigs.pptx">pptx</a>  <br/>
+</div>
+
+
+</div> <!-- end content -->
+
+<div id="footer">
+ (c) <a href="https://crypto.stanford.edu/~dabo">Dan Boneh</a>, Stanford University
+
+</div> <!-- end inner_wrapper -->
+</div> <!-- end outer_wrapper -->
+</body>
+</html>
